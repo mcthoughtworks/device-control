@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: device-control-service
+
+  datasource:
+    url: ${DC_DATASOURCE_URL:jdbc:postgresql://localhost:5432/devices-db}
+    username: ${DC_DATASOURCE_USER:postgres}
+    password: ${DC_DATASOURCE_PASSWORD:postgres}
+
+  sql:
+    init:
+      mode: always
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    defer-datasource-initialization: true
