@@ -20,3 +20,9 @@ For generate and publish the image in the docker hub you can run the following c
 After this, we can run the docker command that will provision the application and database containers.
 
     docker compose up --build -d
+
+## Test
+
+After running docker you can test the application with this command.
+
+    curl --location 'http://localhost:8080/v1/devices'
